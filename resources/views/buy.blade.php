@@ -10,15 +10,10 @@
             <div class="panel-heading">Sits</div>
 
             <!-- Table -->
-            <table class="table">
-              @foreach ($sits as $sit)
-                <tr>
-                  <td><a href="/buy/{{ $sit->id }}">{{ $sit->id }}</a></td>
-                  <td>{{ $sit->numero }}</td>
-                  <td>Comprar</td>
-                </tr>
-              @endforeach
-            </table>
+
+            <p>Número: <bold>{{ $sit->numero }}</bold></p>
+
+            <a href="/buy/{{ $sit->id }}/confirm">Comprar</a>
           </div>
 
 

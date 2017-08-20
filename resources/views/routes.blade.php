@@ -13,10 +13,10 @@
             <table class="table">
               @foreach ($main_routes as $route)
                 <tr>
-                  <td><a href="/scheduls/{{ $route['id'] }}">{{ $route['id'] }}</a></td>
-                  <td>{{ $route['origin'] }}</td>
-                  <td>{{ $route['destiny'] }}</td>
-                  <td>{{ $route['duration'] }}</td>
+                  <td><a href="/scheduls/{{ $route->id }}">{{ $route->id }}</a></td>
+                  <td>{{ $route->origen }}</td>
+                  <td>{{ $route->destino }}</td>
+                  <td>{{ $route->duracion }}</td>
                 </tr>
               @endforeach
             </table>

@@ -14,9 +14,9 @@
             <table class="table">
               @foreach ($schedul as $exit)
                 <tr>
-                  <td><a href="/sits/{{ $exit['id'] }}">{{ $exit['id'] }}</a></td>
-                  <td>{{ $exit['exit_time'] }}</td>
-                  <td>{{ $exit['price'] }}</td>
+                  <td><a href="/sits/{{ $exit->id }}">{{ $exit->id }}</a></td>
+                  <td>{{ $exit->hora_salida }}</td>
+                  <td>{{ $exit->precio }}</td>
                 </tr>
               @endforeach
             </table>

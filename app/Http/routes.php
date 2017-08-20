@@ -21,4 +21,8 @@ Route::get('/scheduls/{id}', 'schedulsController@index');
 // id schedul
 Route::get('/sits/{id}', 'busSitsController@index');
 
+// id sit
+Route::get('/buy/{id}', 'buyController@index');
+Route::get('/buy/{id}/confirm', 'buyController@confirm');
+
 //  Route::get('hello', 'ejemploController@hello');
