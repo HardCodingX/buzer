@@ -7,7 +7,7 @@ use Requests;
 use View;
 use DB;
 
-class busSitsController extends Controller {
+class busSitsController extends baseController {
 
   public function index($id) {
 

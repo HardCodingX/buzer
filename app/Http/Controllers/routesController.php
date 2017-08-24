@@ -9,7 +9,7 @@ use View;
 use Hash;
 use DB;
 
-class routesController extends Controller {
+class routesController extends baseController {
 
   public function index() {
     //  $secret = Hash::make('stringtobehashed', array('cost' => 20));

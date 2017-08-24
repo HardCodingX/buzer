@@ -6,7 +6,7 @@ use Request;
 use Requests;
 use View;
 
-class homeController extends Controller {
+class homeController extends baseController {
 
   public function index() {
     return View('home');

@@ -7,7 +7,7 @@ use Requests;
 use View;
 use DB;
 
-class schedulsController extends Controller {
+class schedulsController extends baseController {
 
   public function index($id) {
 

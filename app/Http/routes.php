@@ -25,4 +25,12 @@ Route::get('/sits/{id}', 'busSitsController@index');
 Route::get('/buy/{id}', 'buyController@index');
 Route::get('/buy/{id}/confirm', 'buyController@confirm');
 
+Route::get('/register', 'authController@register');
+Route::post('/register', 'authController@doRegister');
+
+Route::get('/login', 'authController@login');
+Route::post('/login', 'authController@doLogin');
+
+Route::get('/logout', 'authController@logout');
+
 //  Route::get('hello', 'ejemploController@hello');

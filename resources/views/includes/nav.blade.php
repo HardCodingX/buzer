@@ -15,7 +15,16 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><a href="/routes">Routes</a></li>
+      </ul>
 
+      <ul class="nav navbar-nav navbar-right">
+        @if ($logued === true)
+          <li><a href="/profile">Profile
+          <li><a href="/logout">Logout</a></li>
+        @else
+          <li><a href="/register">Register</a></li>
+          <li><a href="/login">Login</a></li>
+        @endif
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
