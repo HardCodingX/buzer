@@ -2,21 +2,21 @@
 
 @section('content')
   <div class="container">
-      <div class="content">
-          <div class="title">Sits</div>
+    <div class="content">
+      <div class="panel panel-default">
+        <div class="panel-heading">Sits</div>
+        @if ($isBuyed)
+          <p>Ya tienes reservado este asiento</p>
+        @else
+          <p>Número: <bold>{{ $sit->numero }}</bold></p>
 
-          <div class="panel panel-default">
-            <!-- Default panel contents -->
-            <div class="panel-heading">Sits</div>
+          <p>Opciones de pago</p>
 
-            <!-- Table -->
-
-            <p>Número: <bold>{{ $sit->numero }}</bold></p>
-
-            <a href="/buy/{{ $sit->id }}/confirm">Comprar</a>
-          </div>
-
-
+          <a href="/buy/{{ $sit->id }}/confirm/tc">Tarjeta de credito</a>
+          <a href="/buy/{{ $sit->id }}/confirm/pp">Pay Pal</a>
+          <a href="/buy/{{ $sit->id }}/confirm">Oxxo</a>
+        @endif
       </div>
+    </div>
   </div>
 @endsection

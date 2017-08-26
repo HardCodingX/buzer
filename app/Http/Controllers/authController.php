@@ -40,7 +40,14 @@ class authController extends baseController {
       if (Hash::check($password, $client[0]->password)) {
         Session::put('logued', true);
         Session::put('client', $client[0]);
-        return redirect()->action('homeController@index');
+
+        $sit = Session::get('current_sit', 0);
+        if ($sit > 0) {
+          return redirect('/buy/'.$sit);
+        } else {
+          //return redirect('/buy/'.$sit);
+          return redirect()->action('homeController@index');
+        }
       }
     }
 

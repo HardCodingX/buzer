@@ -23,7 +23,9 @@ Route::get('/sits/{id}', 'busSitsController@index');
 
 // id sit
 Route::get('/buy/{id}', 'buyController@index');
-Route::get('/buy/{id}/confirm', 'buyController@confirm');
+Route::get('/buy/{id}/confirm', 'buyController@confirm')->middleware('isLogued');
+
+Route::get('/buy/{id}/confirm/{confirmed}', 'buyController@confirm')->middleware('isLogued');
 
 Route::get('/register', 'authController@register');
 Route::post('/register', 'authController@doRegister');
