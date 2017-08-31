@@ -30,9 +30,13 @@ Route::get('/buy/{id}/confirm/{confirmed}', 'buyController@confirm')->middleware
 Route::get('/register', 'authController@register');
 Route::post('/register', 'authController@doRegister');
 
+Route::get('/profile', 'profileController@index')->middleware('isLogued');
+
 Route::get('/login', 'authController@login');
 Route::post('/login', 'authController@doLogin');
 
 Route::get('/logout', 'authController@logout');
+
+Route::post('/changePassword', 'authController@changePassword')->middleware('isLogued');
 
 //  Route::get('hello', 'ejemploController@hello');

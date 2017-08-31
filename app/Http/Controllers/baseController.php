@@ -8,7 +8,7 @@ use View;
 class baseController extends Controller {
 
   public function __construct() {
-    View::share ('logued', Session::get('logued', false));
+    View::share('logued', Session::get('logued', false));
   }
 
 }

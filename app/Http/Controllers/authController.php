@@ -58,4 +58,33 @@ class authController extends baseController {
     Session::flush();
     return redirect()->action('authController@login');
   }
+
+  public function changePassword() {
+    $currentPassword = Request::get('currentPassword', '');
+    $newPassword = Request::get('newPassword', '');
+
+    $client = DB::table('clientes')
+      ->where('id', '=', Session::get('client')->id)
+      ->get();
+
+    if (count($client) == 1) {
+      //  if (Hash::check($currentPassword, $client[0]->password)) {
+
+        $password = Hash::make($newPassword, ['cost' => 20]);
+
+        DB::table('clientes')
+          ->where(['id' => Session::get('client')->id])
+          ->update([
+            'password' => $password
+          ]);
+
+        Session::flush();
+        return redirect()->action('authController@login');
+      //  } else {
+      //    return redirect()->action('profileController@index');
+      //  }
+    } else {
+        return redirect()->action('profileController@index');
+    }
+  }
 }

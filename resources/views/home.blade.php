@@ -3,7 +3,7 @@
 @section('content')
   <div class="container">
       <div class="content">
-          <div class="title">Laravel 555</div>
+          <div class="title">Buzer</div>
       </div>
   </div>
 @endsection
