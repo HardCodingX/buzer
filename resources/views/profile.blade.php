@@ -15,7 +15,20 @@
             <!-- Tab panes -->
             <div class="tab-content">
               <div role="tabpanel" class="tab-pane active" id="history">
-                History
+
+                <table class="table table-striped">
+                  @foreach ($sits as $sit)
+                    <tr>
+                      <td>{{ $sit->origen }}</td>
+                      <td>{{ $sit->destino }}</td>
+                      <td>{{ $sit->precio }}</td>
+                      <td>{{ $sit->hora_salida }}</td>
+                      <td>{{ $sit->numero }}</td>
+                      <td>{{ $buy_status[$sit->pagado] }}</td>
+                    </tr>
+                  @endforeach
+                </table>
+
               </div>
 
 
@@ -32,9 +45,8 @@
                   <input type="submit" value="Change" />
 
                 </form>
-
-
               </div>
+
             </div>
           </div>
 

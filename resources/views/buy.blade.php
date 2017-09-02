@@ -3,8 +3,8 @@
 @section('content')
   <div class="container">
     <div class="content">
-      <div class="panel panel-default">
-        <div class="panel-heading">Sits</div>
+      <div class="panel panel-primary">
+        <div class="panel-heading">Compra tu asiento</div>
         @if ($isBuyed)
           <p>Ya tienes reservado este asiento</p>
         @else

@@ -5,18 +5,18 @@
       <div class="content">
           <div class="title">Rutas</div>
 
-          <div class="panel panel-default">
+          <div class="panel panel-primary">
             <!-- Default panel contents -->
-            <div class="panel-heading">Panel heading</div>
+            <div class="panel-heading">Nuevas rutas</div>
 
             <!-- Table -->
-            <table class="table">
+            <table class="table table-striped">
               @foreach ($main_routes as $route)
                 <tr>
-                  <td><a href="/scheduls/{{ $route->id }}">{{ $route->id }}</a></td>
+                  <td><a class="btn btn-primary" href="/scheduls/{{ $route->id }}">Comprar</a></td>
                   <td>{{ $route->origen }}</td>
                   <td>{{ $route->destino }}</td>
-                  <td>{{ $route->duracion }}</td>
+                  <td><span class="badge">{{ $route->duracion }}</span></td>
                 </tr>
               @endforeach
             </table>

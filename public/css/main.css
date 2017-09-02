@@ -26,3 +26,18 @@ body {
 .title {
   font-size: 96px;
 }
+
+.home_image {
+  margin: 10px;
+  display: inline-block;
+  width: 30%;
+  max-width: 200px;
+}
+
+.home_image img {
+  width: 100%;
+}
+
+.home_image:hover {
+  color: blue;
+}
